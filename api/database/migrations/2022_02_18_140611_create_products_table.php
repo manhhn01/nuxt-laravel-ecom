@@ -25,9 +25,6 @@ class CreateProductsTable extends Migration
             $table->foreignId('brand_id')->nullable()
                 ->constrained()
                 ->nullOnDelete();
-            $table->foreignId('coupon_id')->nullable()
-                ->constrained()
-                ->nullOnDelete();
 
             $table->timestamps();
         });

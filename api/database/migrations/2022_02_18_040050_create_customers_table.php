@@ -20,6 +20,7 @@ class CreateCustomersTable extends Migration
             $table->string('password');
             //0: male, 1: female, 2: other
             $table->tinyInteger('gender');
+            $table->date('dob');
             $table->string('avatar')->nullable();
             $table->string('phone')->nullable();
             $table->rememberToken();

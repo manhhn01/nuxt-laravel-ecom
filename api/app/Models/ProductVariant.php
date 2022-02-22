@@ -8,4 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class ProductVariant extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'sku', 'price', 'sale_price', 'quantity'
+    ];
+
+    public function options(){
+        return $this->belongsToMany(ProductOption::class);
+    }
+
+    public function orders(){
+        return $this->belongsToMany(Order::class);
+    }
+
+    public function image(){
+        return $this->morphOne(ProductImage::class, 'imageable', 'VariantImage');
+    }
 }
