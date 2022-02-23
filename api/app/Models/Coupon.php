@@ -10,7 +10,7 @@ class Coupon extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'type', 'value', 'max_value', 'quantity', 'expire_at'
+        'name', 'percent', 'value', 'quantity', 'expire_at'
     ];
 
     public function products(){

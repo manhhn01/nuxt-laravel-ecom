@@ -10,7 +10,7 @@ class Order extends Model
     use HasFactory;
 
     protected $fillable = [
-        'status', 'shipping_fee', 'shipped_date'
+        'status', 'shipped_date'
     ];
 
     public function customer(){

@@ -14,7 +14,8 @@ class ProductOptionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'option' => $this->faker->lexify('Option ???'),
+            'value' => $this->faker->word(),
         ];
     }
 }

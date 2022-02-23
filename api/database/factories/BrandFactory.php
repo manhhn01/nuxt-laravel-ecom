@@ -14,7 +14,10 @@ class BrandFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->lexify('brand ???'),
+            'description' => $this->faker->words(5, true),
+            'slug' => $this->faker->slug(),
+            'images' => 'images/brands/default.png',
         ];
     }
 }

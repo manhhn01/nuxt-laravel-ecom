@@ -17,6 +17,7 @@ class CreateCustomersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->dateTime('email_verified_at');
             $table->string('password');
             //0: male, 1: female, 2: other
             $table->tinyInteger('gender');

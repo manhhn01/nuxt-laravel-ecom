@@ -14,7 +14,10 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->lexify('Product ???'),
+            'slug' => $this->faker->slug(),
+            'description' => $this->faker->words(5, true),
+            'status' => rand(0, 1),
         ];
     }
 }

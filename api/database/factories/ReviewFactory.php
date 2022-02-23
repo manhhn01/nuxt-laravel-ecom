@@ -14,7 +14,10 @@ class ReviewFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'comment' => $this->faker->words(10, true),
+            'vote' => $this->faker->numberBetween(1, 5),
+            'like' => $this->faker->numberBetween(0, 10),
+            'status' => rand(0, 1),
         ];
     }
 }

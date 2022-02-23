@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ProductImageFactory extends Factory
+class ProductAttributeFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,8 +14,7 @@ class ProductImageFactory extends Factory
     public function definition()
     {
         return [
-            'url' => 'images/products/default.png',
-            'imageable_type' => 'ProductCover',
+            'name' => $this->faker->lexify('Attribute ???'),
         ];
     }
 }

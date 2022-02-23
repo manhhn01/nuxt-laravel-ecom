@@ -29,8 +29,12 @@ class Product extends Model
         return $this->hasMany(ProductVariant::class);
     }
 
+    public function options(){
+        return $this->hasManyThrough(ProductOption::class, ProductVariant::class);
+    }
+
     public function attributes(){
-        return $this->hasMany(ProductAttribute::class);
+        return $this->belongsToMany(ProductAttribute::class, 'product_attributes_value');
     }
 
     public function reviews(){

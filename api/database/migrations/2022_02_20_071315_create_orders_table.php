@@ -19,7 +19,6 @@ class CreateOrdersTable extends Migration
             $table->foreignId('address_id')->constrained();
             $table->foreignId('coupon_id')->constrained();
             $table->tinyInteger('status');
-            $table->decimal('shipping_fee');
             $table->date('shipped_date')->nullable();
             $table->timestamps();
         });

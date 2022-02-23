@@ -14,7 +14,9 @@ class CategoryFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->lexify('category ???'),
+            'description' => $this->faker->words(5, true),
+            'slug' => $this->faker->slug(),
         ];
     }
 }

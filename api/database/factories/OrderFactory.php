@@ -14,7 +14,8 @@ class OrderFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'status' => rand(0, 3),
+            'shipping_date' => $this->faker->dateTimeThisYear()
         ];
     }
 }
